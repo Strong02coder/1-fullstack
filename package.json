@@ -1,0 +1,15 @@
+{
+  "name": "1-fullstack",
+  "version": "1.0.0",
+  "description": "A node project for aunthentication",
+  "license": "ISC",
+  "author": "ARYAN AGRAWAL",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
