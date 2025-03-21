@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express()
-const port = process.env.PORT || 4006;
+const port = process.env.PORT || 3006;
 
 app.get('/', (req, res) => {
   res.send('My full Stack Project')
