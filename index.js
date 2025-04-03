@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import db from './utils/db.js';
 
 dotenv.config();
 
@@ -8,7 +9,7 @@ const app = express()
 
 app.use(cors(
   {
-    origin: 'http://localhost:3006',
+    origin: process.env.BASE_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
@@ -33,7 +34,8 @@ app.get('/aryan', (req, res) => {
   res.send('Aryan Agrawal')
 })
 
-console.log(process.env.PORT);
+// connect to database
+db();
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
