@@ -1,7 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import db from './utils/db';
+import db from './utils/db.js';
+import connectDB from './utils/db.js';
 
 dotenv.config();
 
@@ -20,7 +21,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-const port = process.env.PORT || 3006;
+const port = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
   res.send('My full Stack Project')
@@ -35,7 +36,7 @@ app.get('/aryan', (req, res) => {
 })
 
 // connect to database
-db();
+connectDB();
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
