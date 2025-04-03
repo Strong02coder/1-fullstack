@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import db from './utils/db.js';
+import db from './utils/db';
 
 dotenv.config();
 
