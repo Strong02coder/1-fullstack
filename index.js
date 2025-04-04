@@ -4,7 +4,7 @@ import cors from 'cors';
 import db from './utils/db.js';
 
 // Importing all routes
-import userRoutes from './routes/User_routes.js';
+import userRoutes from '../routes/user_routes.js';
 
 dotenv.config();
 
@@ -39,6 +39,9 @@ app.get('/aryan', (req, res) => {
 
 // connect to database
 db();
+
+// user routes
+app.use('/api/v1/user', userRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
