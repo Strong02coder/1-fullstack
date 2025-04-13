@@ -4,7 +4,7 @@ import cors from 'cors';
 import db from './utils/db.js';
 
 // Importing all routes
-import userRoutes from '../routes/user_routes.js';
+import userRoutes from './routes/user_routes.js';
 
 dotenv.config();
 
